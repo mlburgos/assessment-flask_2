@@ -1,0 +1,27 @@
+
+/* Why can't I change the background color? I tried using the body selector, 
+    but that also didn't work. */
+/* Why is my styling on the form-control and instructions classes no longer 
+    formatted? It was working when I did it this way in the html-css assessment.*/
+
+/*#body {
+    background-color: #973384;
+}
+*/
+
+
+#fancify {
+    background-color: #973384;
+}
+
+
+.form-control {
+    background-color: yellow;
+}
+
+.instructions {
+    border: 2px solid #a00;
+    border-radius: 15px;
+    text-align: center;
+
+}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Application Form{% endblock %}
+
+{% block body %}
+  <div class="container"> 
+    <div class="page-header">
+      <h1>The Only Website You'll Ever Need. <small>Ever.</small></h1>
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-3 col-xs-6 instructions">Everything your heart could ever desire can be found on this site. Please assist us in serving you by filling out the following form.</div>
+    </div>
+    <form action="/application-success" method="POST">
+      <div class="form-group">
+        <label for="firstname">First Name:</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name:</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+      </div>
+      <div class="form-group">
+        <label for="salaryRequirement">Salary Requirement (in dollars):</label>
+        <div class="input-group">
+          <div class="input-group-addon">$</div>
+          <input type="text" class="form-control" name="salaryRequirement" id="salaryRequirement" placeholder="Amount">
+          <div class="input-group-addon">.00</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>For which position are you applying?</label>
+        <select class="form-control" name="title">
+        {% for job in jobs %}
+          <option>{{ job }}</option>
+        {% endfor %}
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div> 
+{% endblock %}
+
+
+

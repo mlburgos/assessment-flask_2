@@ -1,1 +1,12 @@
 /* Your styles can go here. */
+
+.form-control {
+    background-color: yellow;
+}
+
+.instructions {
+    border: 2px solid #a00;
+    border-radius: 15px;
+    text-align: center;
+
+}
